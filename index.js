@@ -32,7 +32,7 @@ client.on("ready", () => {
 
 // SCRIPT
 // Déclaration du préfix d'une commande
-const PREFIX = "/!";
+const PREFIX = "$";
 
 // Répondre a un message command
 client.on("messageCreate", (message) => {
@@ -64,7 +64,7 @@ client.on("messageCreate", (message) => {
                     .catch(console.log);
             break;
 
-        // Clear des messages du channel
+        // Clear des messages du channel //* EN COUR DE DEV
             case "clear":
             // Récupération du channel id
                 const channel = message.channelId
