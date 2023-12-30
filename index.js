@@ -93,9 +93,12 @@ client.on("messageReactionAdd", async (reaction) => {
         reaction.message.delete();
         let channelLog = reaction.message.guild.channels.cache.get("1147165731235045497");
         if (reaction.message.content !== null) {
-            console.log(reaction.message)
-            const message = "```" + " " + reaction.message.content + " " + "```"
-            channelLog.send(`Le message du bot a été validé et supprimé. Message :` + message);
+        //? a voir pour ajouter le pseudo discord du user qui fait la réaction.
+            // console.log(reaction.message)
+            // const message = "```" + " " + reaction.message.content + " " + "```"
+            // channelLog.send(`Le message du bot a été validé et supprimé. Message :` + message);
+        //? pour le moment répond pareil que le else.
+            channelLog.send(`Le message du bot a été validé et supprimé.`);
         } else {
             channelLog.send(`Le message du bot a été validé et supprimé.`);
         }
